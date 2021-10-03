@@ -1,2 +1,2 @@
 # k-davidson.github.io
-# What you doing, poking around?
+# What ya doing, poking around?
