@@ -43,6 +43,7 @@
             animate();
 
             function init() {
+                console.log("Init!\n");
 
                 container = document.createElement( 'div' );
                 document.body.appendChild( container );
@@ -74,7 +75,7 @@
 
                 var loader = new THREE.STLLoader();
                 loader.load( './skull.stl', function ( geometry ) {
-                    console.log("Got to here...");
+                    console.log("Got to here...\n");
                     var material = new THREE.MeshPhongMaterial( { color: 0xff0000 } );
 
                     var mesh = new THREE.Mesh( geometry, material );
