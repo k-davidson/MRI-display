@@ -74,8 +74,8 @@
 
                 var loader = new THREE.STLLoader();
                 loader.load( './skull.stl', function ( geometry ) {
-
-                    var material = new THREE.MeshPhongMaterial( { color: 0xff5533 } );
+                    console.log("Got to here...");
+                    var material = new THREE.MeshPhongMaterial( { color: 0xff0000 } );
 
                     var mesh = new THREE.Mesh( geometry, material );
 
