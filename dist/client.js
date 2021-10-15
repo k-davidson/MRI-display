@@ -1,4 +1,4 @@
-import * as THREE from 'three'
+import * as THREE from '../build/three.module.js'
 import { Mesh } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader'
