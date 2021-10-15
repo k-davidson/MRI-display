@@ -1,9 +1,9 @@
 import * as THREE from 'three'
+import { Mesh } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 import { FontLoader } from './jsm/loaders/FontLoader.js';
-import { Mesh } from 'three';
 
 const scene = new THREE.Scene()
 scene.add(new THREE.AxesHelper(5))
@@ -90,30 +90,34 @@ function loadSTL()
             font_loader.load('./fonts/F25 Bank Printer_Regular.json', function(font) {
                 const text_geom_1 = new TextGeometry("DCM to STL", {
                     font: font,
-                    size: 0.1,
+                    size: 0.05,
                     height: 0.1,
                 });
 
                 const text_mesh_1 = new Mesh(text_geom_1, material)
                 text_mesh_1.castShadow = true;
+                text_mesh_1.rotation.z =  (Math.PI / 2)
                 text_mesh_1.rotation.y =  -(Math.PI / 2)
+                text_mesh_1.rotation.x = Math.PI
                 text_mesh_1.position.x = -0.75
-                text_mesh_1.position.y = -1.35
-                text_mesh_1.position.z = -0.5
+                text_mesh_1.position.y = 0
+                text_mesh_1.position.z = 0.85
                 scene.add(text_mesh_1)
 
                 const text_geom_2 = new TextGeometry("Parser", {
                     font: font,
-                    size: 0.1,
+                    size: 0.05,
                     height: 0.1,
                 });
 
                 const text_mesh_2 = new Mesh(text_geom_2, material)
                 text_mesh_2.castShadow = true;
+                text_mesh_2.rotation.z =  (Math.PI / 2)
                 text_mesh_2.rotation.y =  -(Math.PI / 2)
+                text_mesh_2.rotation.x = Math.PI
                 text_mesh_2.position.x = -0.75
-                text_mesh_2.position.y = -1.45
-                text_mesh_2.position.z = -0.25
+                text_mesh_2.position.y = 0
+                text_mesh_2.position.z = 0.75
                 scene.add(text_mesh_2)
             });
         },
